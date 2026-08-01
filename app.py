@@ -38,7 +38,7 @@ def load_model():
 
         model = AutoModelForCausalLM.from_pretrained(
             MODEL_NAME,
-            torch_dtype=torch.bfloat16,
+            dtype=torch.bfloat16,
             low_cpu_mem_usage=True,
         )
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
